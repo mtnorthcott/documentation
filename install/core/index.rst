@@ -242,6 +242,7 @@ Next let's create PostGIS extensions
 
 .. code-block:: shell
 
+  sudo -u postgres psql -d geonode -c 'CREATE EXTENSION postgis;'
   sudo -u postgres psql -d geonode_data -c 'CREATE EXTENSION postgis;'
   sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
   sudo -u postgres psql -d geonode_data -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'

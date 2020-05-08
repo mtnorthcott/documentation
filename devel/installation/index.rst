@@ -84,6 +84,7 @@ Create geonode role and database
     $ postgres=# GRANT ALL PRIVILEGES ON DATABASE "geonode_dev" to geonode_dev;
     $ postgres=# GRANT ALL PRIVILEGES ON DATABASE "geonode_dev-imports" to geonode_dev;
     $ postgres=# \q
+    $ psql -d geonode-dev -c 'CREATE EXTENSION postgis;'
     $ psql -d geonode_dev-imports -c 'CREATE EXTENSION postgis;'
     $ psql -d geonode_dev-imports -c 'GRANT ALL ON geometry_columns TO PUBLIC;'
     $ psql -d geonode_dev-imports -c 'GRANT ALL ON spatial_ref_sys TO PUBLIC;'
